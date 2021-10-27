@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wedevassignment/app/pages/authentication_page.dart';
+import 'package:wedevassignment/app/controllers/user_controller.dart';
+import 'package:wedevassignment/app/pages/authentication.dart';
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  MyApp(){
+    Get.put(UserController());
+  }
 
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -17,3 +15,4 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+

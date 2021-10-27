@@ -13,4 +13,8 @@ class ApiRoutes{
   static const String AUTH_LOGIN = '/jwt-auth/v1/token';
 
   static const String USER_PROFILE = '/jwt-auth/v1/token';
+
+  static const _authRequiredRoutes = <String>[];
+
+  static bool isAuthRequired(String route) => _authRequiredRoutes.contains(route);
 }
